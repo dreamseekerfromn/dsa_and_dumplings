@@ -1,3 +1,4 @@
+const twoSum2 = require("./two_sum_2");
 const TwoSum = require("./two_sum_2");
 
 // create tests for a two sum problem
@@ -5,7 +6,7 @@ describe("TwoSum", () => {
   let twoSum;
 
   beforeEach(() => {
-    twoSum = new TwoSum();
+    twoSum = new twoSum2();
   });
 
   test("should return the indices of the two numbers such that they add up to a specific target", () => {

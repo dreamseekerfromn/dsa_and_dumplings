@@ -1,4 +1,4 @@
-import longestSubstringWithoutDuplicates from "./longest_substring_without_duplicates";
+const longestSubstringWithoutDuplicates = require("./longest_substring_without_duplicates");
 
 describe("longestSubstringWithoutDuplicates", () => {
   test("should return the length of the longest substring without repeating characters", () => {

@@ -24,6 +24,21 @@ Constraints:
 1 <= prices.length <= 100
 0 <= prices[i] <= 100
 */
-const maxProfit = (prices) => {};
+const maxProfit = (prices) => {
+    let max = 0;
+    
+    let buy = 0;
+    let sell = 1;
+    while(sell < prices.length){
+        if(prices[buy] < prices[sell]){
+            let current = prices[sell] - prices[buy];
+            max = Math.max(current, max)
+        } else {
+            buy = sell;
+        }
+        sell++;
+    }
+    return max;
+};
 
 module.exports = maxProfit;

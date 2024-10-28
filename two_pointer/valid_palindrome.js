@@ -9,6 +9,18 @@
 
 */
 
-const validPalindrome = (s) => {};
+const validPalindrome = (s) => {
+    s = s.split('').join(' ');
+    let index1 = 0;
+    let index2 = s.length - 1;
+    while(index1 < index2){
+        if(s[index1].toLowerCase() != s[index2].toLowerCase()){
+            return false;
+        }
+        index1++;
+        index2--;
+    }
+    return true;
+};
 
 module.exports = validPalindrome;

@@ -9,6 +9,20 @@
         Explanation: The maximum sum of a contiguous subarray of size 4 is 52.
 */
 
-const maxSumSubarray = (arr, k) => {};
+const maxSumSubarray = (arr, k) => {
+    let max = -Infinity;
+    let index1 = 0;
+    let index2 = index1 + k;
+    while(index2 <= arr.length){
+        let sum = 0;
+        for(let i = index1; i < index2; i++){
+            sum += arr[i];
+        }
+        max = Math.max(sum, max);
+        index1++;
+        index2++;
+    }
+    return max;
+};
 
 module.exports = maxSumSubarray;
